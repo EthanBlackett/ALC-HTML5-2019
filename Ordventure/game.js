@@ -3,14 +3,22 @@
 //var hp = 100;
 
 Game();
-function Game(){
+function Game() {
 alert("Wonderful Sky: Text edition")
 alert("By Micah Stock")
-confirm("Are you ready to start?")
+var start = confirm("Are you ready to start?")
+
+if (start == true) {
+    ForestTown();
+} else {
+    alert("Oh. Then why did you start the game you doughnut?");
+    page.close
+}
 
     //Intro
-ForestTown();
 function ForestTown() {
+    
+
     
 var look = "You are in a clearing in a dense forest. You don't know where you are geographically though. To the west you see the ruins of an enormous city. It looks like it's been bombed in the past. The ruins look really, really old."
     
@@ -42,9 +50,11 @@ var action = prompt("Where shall you go? You can use the commands North, East, S
     alert("The path goes on for about a mile it seems. Your eyes strain to see in the growing darkness. You don't feel like you are in danger though.");
     alert("In the distance, you see lights. You couldn't see them before, as it is darker now than it was then.");
     
+    var look = "It is very dark now, the only meaningful source of light is the floodlights on the other side of the gates."
+    
     while (1==1) {
         
-        var action = prompt("You reach the gates. You don't immediatly spot any guards, but they may just be hiding in the dark").toLowerCase();
+        var action = prompt("You reach the gates, they are on your left. You don't immediatly spot any guards, but they may just be hiding in the dark").toLowerCase();
         
         if(action == "enter" || action == "go inside") {
             alert("You walk inside the gates, still not spotting anyone. You hope no one hostile has spotted you.");
@@ -56,6 +66,8 @@ var action = prompt("Where shall you go? You can use the commands North, East, S
             break;
         } else if (action == "") {
             alert("You hecking doughnut, you didn't type anything.")
+        } else if (action == "look" || action == "l") {
+            alert(look);
         } else {
             alert("I don't know what the hecc you're saying.");
         }
@@ -63,10 +75,12 @@ var action = prompt("Where shall you go? You can use the commands North, East, S
     
     }
     
-insideTown();
-function insideTown() {
+InsideTown();
+function InsideTown() {
     
 alert("The town looks alright, it's not exactly a metropolis, but... yeah. The path you were walking on turns into a road. The streets to your left and right are both blocked with police tape.")
+    
+var look = "There are lots of buildings, with poor looking kiosks in front of them. There are miscellaneous products displayed, with prices written neatly on signs all over. The kiosks, while dirty and battered, don't necessarily look old."
     
     while (1==1) {
            var action = prompt("What will you do?").toLowerCase();
@@ -74,10 +88,17 @@ alert("The town looks alright, it's not exactly a metropolis, but... yeah. The p
         if (action == "die") {
             alert("You are eaten by a grue. The end, you died, you awful person.")
             page.close
-        } else if (action = "north" || action == "n") {
-            
+        } else if (action == "north" || action == "n") {
+            alert("yeet");
+        } else if (action == "look" || action == "l") {
+            alert(look);
+            alert("You can only go west and east, but you just came from the east.")
+        } else if (action == "") {
+            alert("Do you even know how to use a keyboard?")
+        } else {
+            alert("That makes no sense to me.")
         }
         }
         }
     }
-}
+
