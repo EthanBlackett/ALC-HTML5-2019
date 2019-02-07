@@ -20,7 +20,7 @@ function ForestTown() {
     
 
     
-var look = "You are in a clearing in a dense forest. You don't know where you are geographically though. To the west you see the ruins of an enormous city. It looks like it's been bombed in the past. The ruins look really, really old."
+var look = "You are in a clearing in a dense forest. You don't know where you are geographically though. To the west you see the ruins of an enormous city. It looks like it's been bombed in the past. The ruins look really, really old. There is also a dagger on the ground."
     
 alert("The wind is blowing, and it's cold.");
 alert("The sun is just setting, but you just woke up. You are standing in a forest, surrounded by tall pine trees.");
@@ -56,7 +56,7 @@ var action = prompt("Where shall you go? You can use the commands North, East, S
         
         var action = prompt("You reach the gates, they are on your left. You don't immediatly spot any guards, but they may just be hiding in the dark").toLowerCase();
         
-        if(action == "enter" || action == "go inside") {
+        if(action == "enter" || action == "go inside" || action == "w" || action == "west") {
             alert("You walk inside the gates, still not spotting anyone. You hope no one hostile has spotted you.");
             break;
         } else if (action == "open gate" || action == "open gates" || action == "unlock gates" || action == "unlock gate") {
@@ -66,6 +66,7 @@ var action = prompt("Where shall you go? You can use the commands North, East, S
             break;
         } else if (action == "") {
             alert("You hecking doughnut, you didn't type anything.")
+        //nice 
         } else if (action == "look" || action == "l") {
             alert(look);
         } else {
@@ -89,7 +90,8 @@ var look = "There are lots of buildings, with poor looking kiosks in front of th
             alert("You are eaten by a grue. The end, you died, you awful person.")
             page.close
         } else if (action == "north" || action == "n") {
-            alert("yeet");
+            alert("You head further into the town.");
+            alert("You begin to hear voices coming from a ways ahead.")
         } else if (action == "look" || action == "l") {
             alert(look);
             alert("You can only go west and east, but you just came from the east.")
@@ -101,4 +103,3 @@ var look = "There are lots of buildings, with poor looking kiosks in front of th
         }
         }
     }
-
