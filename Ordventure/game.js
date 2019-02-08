@@ -52,6 +52,8 @@ var action = prompt("Where shall you go? You can use the commands North, East, S
     
     var look = "It is very dark now, the only meaningful source of light is the floodlights on the other side of the gates."
     
+    //AT THE GATES
+    
     while (1==1) {
         
         var action = prompt("You reach the gates, they are on your left. You don't immediatly spot any guards, but they may just be hiding in the dark").toLowerCase();
@@ -79,19 +81,22 @@ var action = prompt("Where shall you go? You can use the commands North, East, S
 InsideTown();
 function InsideTown() {
     
+    //INSIDE TOWN ENTRANCE
+    
 alert("The town looks alright, it's not exactly a metropolis, but... yeah. The path you were walking on turns into a road. The streets to your left and right are both blocked with police tape.")
     
 var look = "There are lots of buildings, with poor looking kiosks in front of them. There are miscellaneous products displayed, with prices written neatly on signs all over. The kiosks, while dirty and battered, don't necessarily look old."
-    
+
     while (1==1) {
            var action = prompt("What will you do?").toLowerCase();
         
         if (action == "die") {
             alert("You are eaten by a grue. The end, you died, you awful person.")
             page.close
-        } else if (action == "north" || action == "n") {
+        } else if (action == "west" || action == "w") {
             alert("You head further into the town.");
             alert("You begin to hear voices coming from a ways ahead.")
+            break;
         } else if (action == "look" || action == "l") {
             alert(look);
             alert("You can only go west and east, but you just came from the east.")
@@ -101,5 +106,9 @@ var look = "There are lots of buildings, with poor looking kiosks in front of th
             alert("That makes no sense to me.")
         }
         }
+    
+    //FURTHER INTO TOWN
+    
+    alert("\"Hey you there!\"");
         }
-    }
+}
