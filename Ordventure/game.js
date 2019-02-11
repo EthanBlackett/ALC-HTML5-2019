@@ -7,6 +7,7 @@ function Game() {
 alert("Wonderful Sky: Text edition")
 alert("By Micah Stock")
 var start = confirm("Are you ready to start?")
+var cheat = false;
 
 if (start == true) {
     ForestTown();
@@ -18,7 +19,7 @@ if (start == true) {
     //Intro
 function ForestTown() {
     
-
+    var inventory = ["Dagger", "Wings", null, null, null]
     
 var look = "You are in a clearing in a dense forest. You don't know where you are geographically though. To the west you see the ruins of an enormous city. It looks like it's been bombed in the past. The ruins look really, really old. There is also a dagger on the ground."
     
@@ -43,6 +44,9 @@ var action = prompt("Where shall you go? You can use the commands North, East, S
         alert("There's nothing but trees in that direction.")
     } else if (action == "west" || action == "w") {
         alert("The ruins of a city. It's no use trying to get there, there's a lot of forest in the way.")
+    } else if (action == "bench appearo")  {
+        alert("Cheats enabled")
+        var cheat = true;
     } else {
         alert("I don't understand your nonsense.");
     }
@@ -89,17 +93,40 @@ var look = "There are lots of buildings, with poor looking kiosks in front of th
         if (action == "die") {
             alert("You are eaten by a grue. The end, you died, you awful person.")
             page.close
-        } else if (action == "north" || action == "n") {
+        } else if (action == "west" || action == "w") {
             alert("You head further into the town.");
-            alert("You begin to hear voices coming from a ways ahead.")
+            alert("You begin to hear voices coming from a ways ahead.");
+            alert("\"Who are you?\" a small girl asked");
+            break;
         } else if (action == "look" || action == "l") {
             alert(look);
             alert("You can only go west and east, but you just came from the east.")
+        } else if (action == "north" || action == "n" || action == "south" || action == "s") {
+        alert("You can't go that way.")
         } else if (action == "") {
             alert("Do you even know how to use a keyboard?")
         } else {
             alert("That makes no sense to me.")
         }
         }
+    
+    while (1==1) {
+        var action = prompt("What do you say? \n 1 -\"Just a wanderer\" \n 2 -shrug \n 3 -remain silent").toLowerCase();
+        
+    if (action == "yeet" && cheat == true) {
+        alert(cheat);
+        alert("\"Yeet.\" You pick up the small child, and throw them as hard as you can into the woods. They are never heard from again.");
+        alert("\"Hey! That weird lookin folk' just dun yeeted that B! Let's humiliate and abuse him!\"");
+        alert("You are beaten to death.")
+        alert("The end, you suck.")
+        page.close;
+    } else if (action == "shut up liberal" && cheat == true) {
+        alert("She is absolutely destroyed by your logic and facts. People cheer as you stand proud, defending your country. The girl stutters and leaves, clearly inferior when compared to your superior skills. You have won the game.");
+        page.close;
+    } else if (action == "1") {
+        alert("\"Okay? Welcome to my home! My mom is over here, you should come talk to her!\" the little girl says, tugging your hand. You don't really have any choice but to follow.")
+    }
+    }
+    
         }
     }
