@@ -1,7 +1,3 @@
-//oh yeah this is java btw
-//var location = "start"
-//var hp = 100;
-
 Game();
 function Game() {
 alert("Wonderful Sky: Text edition")
@@ -343,6 +339,9 @@ var look = "There are lots of buildings, with poor looking kiosks in front of th
             alert("You enter the humble store");
             FirstStore();
             break;
+        } else if (action == "west" || action == "w") {
+            alert("You continue forward.");
+            TownWest();
         }
         }
     }
@@ -350,7 +349,7 @@ var look = "There are lots of buildings, with poor looking kiosks in front of th
     function FirstStore() {
         look = "The lights are off, but the large front windows let in more than enough light. The place looks very modern, not dirty and dilapidated like most of the rest of the town. It also smells nice."
         alert("A bell dings as you open the door.")
-        alert("\"Ah welcome! A kind looking woman says, facing the other way as she organized a back shelf.\"");
+        alert("\"Ah welcome! A kind looking woman says, facing the other way as she organized a back shelf.\"")
         
         //skips back for some reason
         if (dagger == true) {
@@ -392,6 +391,15 @@ var look = "There are lots of buildings, with poor looking kiosks in front of th
         } 
         
         
+    }
+    
+    function TownWest() {
+        alert("You can smell food from the bazaar, you realize that you are very hungry");
+        action = prompt("What will you do? \n 1 -Look for free food \n 2 -find Cardd").toLowerCase();
+        
+        if (action == "1") {
+            alert("You set out to find food that doesn't cost money.")
+        }
     }
             
         
