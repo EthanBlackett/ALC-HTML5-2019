@@ -1,0 +1,28 @@
+/*Stylesheet for Mobile App */
+
+/* reset */
+html, body, div, h1, h2, h3, h4, h5, h6, p, ul, li, header, footer, nav {
+    margin: 0px;
+    padding: 0;
+    
+}
+
+/* universal style */
+
+body {
+    background-color:#888888;
+}
+
+ul {
+    color:#ffe200;
+}
+
+header {
+    font-size: 24px;
+    color:#ffe200;
+}
+div#container {
+    width:1200px;
+    height:800px;
+    background-color:#191919;
+}
