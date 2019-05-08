@@ -57,6 +57,16 @@ div.keepOpen {
     clear: both;
 }
 
+img{
+    transition:0.4s;
+    width: 200px;
+    
+}
+
+img:hover{
+    width: 400px;
+}
+
 header {
     font-size: 24px;
     color:#ceffff;
@@ -81,6 +91,10 @@ h3 {
     font-family: "Montserrat SemiBold";
     color:#ceffff;
     font-size: 30px;
+}
+
+p{
+    color:white;
 }
 
 @media screen and (max-width: 600px) {
